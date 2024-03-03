@@ -20,8 +20,13 @@ The Wagner-Fischer algorithm is a dynamic programming algorithm used to find the
 
 4. **Compute the Edit Distance**: Once the matrix is filled, the edit distance between the two strings is the value in the bottom-right corner of the matrix.
 
-## **Examples of Applications:** ##
+## **Examples of Applications** ##
 
 1. **Spell Checking**: In spell checking systems, the Wagner-Fischer algorithm can be used to suggest corrections for misspelled words by finding the closest word in a dictionary based on edit distance.
 
 2. **Genetic Sequence Alignment**: In bioinformatics, the algorithm is used to align genetic sequences, which helps identify mutations, similarities, and differences between DNA or protein sequences. The edit distance corresponds to the number of mutations needed to transform one sequence into another, providing valuable insights into evolutionary relationships.
+
+## Other sources ##
+https://www.nathaniel.ai/myers-diff/
+https://gist.github.com/adamnew123456/37923cf53f51d6b9af32a539cdfa7cc4
+https://ceptord.net/20200815-Comparison.html
