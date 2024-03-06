@@ -1,39 +1,31 @@
-var wordA;
-var wordB;
-
 function setup() {
-  createCanvas(500, 500); // Create a canvas to draw on
-  input1 = createInput();
-  input2 = createInput();
-  button = createButton('Submit');
-  button.mousePressed(run);
+  createCanvas(500, 500);            // Create a canvas to draw on
+  input1 = createInput();            // Textbox for word1
+  input2 = createInput();            // Textbox for word2
+  button = createButton('Submit');   // Submit button
+  button.mousePressed(run);          // Run the 'run' function when the button is pressed
 }
 
-function draw() {
-// circle(20, 10, 20);
-  
-}
 
 function run() {
   const word1 = '_' + input1.value(); // Add '_' before the first word
   const word2 = '_' + input2.value(); // Add '_' before the second word
   
-  const gridSizeX = word1.length; // Number of columns
-  const gridSizeY = word2.length; // Number of rows
-  const squareSize = min(width / gridSizeX/2, height / gridSizeY/2);
+  const gridSizeX = word1.length;     // Number of columns
+  const gridSizeY = word2.length;     // Number of rows
+  const squareSize = min(width / gridSizeX/2, height / gridSizeY/2); // Set size of grid cell
   
   
-  
-  const distances = [];
+  const distances = [];                     // Empty list for storing distances
   for (let i = 0; i < word2.length; i++) {
-    distances.push([]);
+    distances.push([]);                     // Add an empty list to distances
     for (let j = 0; j < word1.length; j++) {
       const distance = wagner_fischer(word1.slice(0, j + 1), word2.slice(0, i + 1));
       distances[i].push(distance);
     }
   }
   
-  
+  // Draw the inner grid
   for (let i = 0; i < word1.length; i++) {
     for (let j = 0; j < word2.length; j++) {
       const x = (i + 1) * squareSize; // Offset by one position to the right
@@ -59,6 +51,8 @@ function run() {
   }
 }
 
+
+// Generic drawSquare function
 function drawSquare(x, y, size, letter) {
   rect(x, y, size, size);
   textSize(20);
