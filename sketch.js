@@ -5,6 +5,11 @@ function setup() {
   button = createButton('Submit');   // Submit button
   button.mousePressed(run);          // Run the 'run' function when the button is pressed
   
+  input1.position(0, 20); // Adjust these values as needed
+  input2.position(220, 20); // Adjust these values as needed
+  button.position(440, 18); // Adjust these values as needed
+  
+  
   input1.style('width', '200px');    // Set width of input1
   input2.style('width', '200px');    // Set width of input2
   input1.style('height', '28px');    // Set width of input1
@@ -30,6 +35,9 @@ function run() {
   const gridSizeY = word2.length;     // Number of rows
   const squareSize = min(width / gridSizeX/2, height / gridSizeY/2); // Set size of grid cell
   
+  const gridStartX = 30; // X coordinate where the grid starts
+  const gridStartY = 80; // Y coordinate where the grid starts
+  
   
   const distances = [];                     // Empty list for storing distances
   for (let i = 0; i < word2.length; i++) {
@@ -43,8 +51,8 @@ function run() {
   // Draw the inner grid
   for (let i = 0; i < word1.length; i++) {
     for (let j = 0; j < word2.length; j++) {
-      const x = (i + 1) * squareSize; // Offset by one position to the right
-      const y = (j + 1) * squareSize; // Offset by one position down
+      const x = gridStartX + (i + 1) * squareSize; // Offset by one position to the right
+      const y = gridStartY + (j + 1) * squareSize; // Offset by one position down
       let fillColor = color(255,255,255);
       if (i === word1.length - 1 && j === word2.length - 1) {
         fillColor = color(76, 175, 80); // Different color for the bottom-right corner
@@ -56,15 +64,15 @@ function run() {
   
   // Draw squares for each letter in word1 (first row)
   for (let i = 0; i < word1.length; i++) {
-    const x = (i + 1) * squareSize; // Offset by one position to the right
-    const y = 0; // Row 0
+    const x = gridStartX+ (i + 1) * squareSize; // Offset by one position to the right
+    const y = gridStartY; // Row 0
     drawSquare(x, y, squareSize, word1.charAt(i), color(128,128,128));
   }
   
   // Draw squares for each letter in word2 (first column)
   for (let j = 0; j < word2.length; j++) {
-    const x = 0; // Column 0
-    const y = (j + 1) * squareSize; // Shift down by one square size to leave space for the first row
+    const x = gridStartX; // Column 0
+    const y = gridStartY + (j + 1) * squareSize; // Shift down by one square size to leave space for the first row
     drawSquare(x, y, squareSize, word2.charAt(j), color(128,128,128));
   }
 }
