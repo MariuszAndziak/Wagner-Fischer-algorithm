@@ -1,7 +1,4 @@
-def load_dict(file_name):
-    with open(file_name, 'r') as file:
-        return [line.strip() for line in file]
-
+# Implementation in Python
 def wagner_fischer(s1, s2):
     len_s1, len_s2 = len(s1), len(s2)
     if len_s1 > len_s2:
@@ -18,14 +15,3 @@ def wagner_fischer(s1, s2):
             curr_row[j] = min(add, delete, change)
     
     return curr_row[len_s1]
-
-def check_spelling(word, dictionary):
-    suggestions = []
-
-    for correct_word in dictionary:
-        distance = wagner_fischer(word, correct_word)
-        suggestions.append((correct_word, distance))
-    
-    suggestions.sort(key = lambda x: x[1])
-
-    return suggestions

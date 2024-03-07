@@ -78,7 +78,6 @@ function run() {
   }
 }
 
-
 // Generic drawSquare function
 function drawSquare(x, y, size, letter, fillColor) {
   fill(fillColor);
@@ -88,7 +87,6 @@ function drawSquare(x, y, size, letter, fillColor) {
   textAlign(CENTER, CENTER);
   text(letter, x + size / 2, y + size / 2);
 }
-
 
 
 function wagner_fischer(s1, s2) {
