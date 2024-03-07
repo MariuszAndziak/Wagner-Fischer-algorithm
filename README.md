@@ -6,7 +6,7 @@ The Wagner-Fischer algorithm is a dynamic programming algorithm used to find the
 
 ## **Constructed implementation** ## 
 <div style="text-align:center;">
-![](https://github.com/MariuszAndziak/Wagner-Fischer-algorithm/blob/main/anim.webp)
+<img src="https://github.com/MariuszAndziak/Wagner-Fischer-algorithm/blob/main/anim.webp" alt="Your Image Description">
 </div>
 
 ## **Steps to Run the Wagner-Fischer Algorithm** ##
