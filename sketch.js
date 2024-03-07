@@ -38,6 +38,7 @@ function run() {
   const gridStartX = 30; // X coordinate where the grid starts
   const gridStartY = 80; // Y coordinate where the grid starts
   
+   background(255);
   
   const distances = [];                     // Empty list for storing distances
   for (let i = 0; i < word2.length; i++) {
