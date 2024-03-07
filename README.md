@@ -4,6 +4,10 @@
 
 The Wagner-Fischer algorithm is a dynamic programming algorithm used to find the minimum edit distance between two strings. The edit distance between two strings is defined as the minimum number of operations required to transform one string into the other, where the allowed operations are insertion, deletion, or substitution of a single character.
 
+## **Constructed implementation** ## 
+![](https://github.com/MariuszAndziak/Wagner-Fischer-algorithm/anim.gif)
+
+
 ## **Steps to Run the Wagner-Fischer Algorithm** ##
 
 1. **Initialize the Matrix**: Create a matrix with dimensions (m+1) x (n+1), where m and n are the lengths of the two strings being compared.
