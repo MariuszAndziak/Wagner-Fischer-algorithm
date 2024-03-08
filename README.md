@@ -1,8 +1,8 @@
 # Wagner-Fischer-algorithm #
+[![Generic badge](https://img.shields.io/badge/languge-english-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/basic%20algorithm%20implementation-8A2BE2)](https://www.shields.io/)
 
-## **Summary of the Wagner-Fischer Algorithm** ## 
-
-The Wagner-Fischer algorithm is a dynamic programming algorithm used to find the minimum edit distance between two strings. The edit distance between two strings is defined as the minimum number of operations required to transform one string into the other, where the allowed operations are insertion, deletion, or substitution of a single character.
+> The Wagner-Fischer algorithm is a dynamic programming algorithm used to find the minimum edit distance between two strings. The edit distance between two strings is defined as the minimum number of operations required to transform one string into the other, where the allowed operations are insertion, deletion, or substitution of a single character.
 
 ## **Constructed implementation** ## 
 <p align="center">
