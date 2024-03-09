@@ -5,9 +5,11 @@ function setup() {
   button = createButton('Submit');   // Submit button
   button.mousePressed(run);          // Run the 'run' function when the button is pressed
   
-  input1.position(0, 20); // Adjust these values as needed
-  input2.position(220, 20); // Adjust these values as needed
-  button.position(440, 18); // Adjust these values as needed
+  text("Write two words in each textbox to compute their edit distance using the Wagner–Fischer", 0, 70 )
+  text("algorithm", 0, 82)
+  input1.position(0, 10); // Adjust these values as needed
+  input2.position(220, 10); // Adjust these values as needed
+  button.position(440, 8); // Adjust these values as needed
   
   
   input1.style('width', '200px');    // Set width of input1
